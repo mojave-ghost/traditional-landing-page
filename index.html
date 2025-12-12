@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Growth Masterclass - Scale Your Success</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header-cta {
+            background: #10b981;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .header-cta:hover {
+            background: #059669;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, #f8fafc, #fff);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 .highlight {
+            color: #10b981;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .primary-cta {
+            background: #10b981;
+            color: white;
+            padding: 18px 45px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            font-family: 'Arial', sans-serif;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .primary-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        }
+
+        .secondary-cta {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Social Proof Bar */
+        .social-proof {
+            background: #10b981;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .social-proof-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .proof-item {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        .proof-number {
+            font-size: 1.8rem;
+            display: block;
+        }
+
+        /* Testimonials Carousel */
+        .testimonials {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 4rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-card {
+            background: #f8fafc;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #10b981;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #334155;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .author-info h4 {
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .author-info p {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Video Section */
+        .video-section {
+            background: #0f172a;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .video-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .video-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .video-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .video-text ul {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .video-text ul li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .video-text ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .video-placeholder {
+            background: #1e293b;
+            aspect-ratio: 16/9;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder:hover {
+            transform: scale(1.02);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Results Section */
+        .results {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .result-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #10b981;
+        }
+
+        .result-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .result-stat {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 0.5rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .result-label {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: #d1fae5;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h3 {
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .benefit-content p {
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        /* Pricing Table */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #0f172a, #1e293b);
+            color: white;
+        }
+
+        .pricing-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .pricing-card {
+            background: white;
+            color: #0f172a;
+            padding: 3rem;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: #10b981;
+            color: white;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .pricing-top {
+            text-align: center;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .pricing-amount {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #10b981;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .pricing-period {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .pricing-save {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .pricing-features {
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: start;
+            gap: 0.8rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .check-icon {
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .pricing-cta {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .pricing-button {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 18px 60px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            font-family: 'Arial', sans-serif;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .guarantee-text {
+            text-align: center;
+            margin-top: 2rem;
+            color: #94a3b8;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Final Testimonials */
+        .final-testimonials {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .big-testimonial {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 4rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .big-testimonial .stars {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .big-testimonial blockquote {
+            font-size: 1.5rem;
+            color: #334155;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .big-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .big-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .big-author-info h4 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            margin-bottom: 0.3rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .big-author-info p {
+            color: #64748b;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .video-content,
+            .benefits-grid,
+            .pricing-features {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">GrowthMaster</div>
+            <a href="#pricing" class="header-cta">Get Started</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">🏆 Trusted by 50,000+ Entrepreneurs</div>
+            <h1>Build a <span class="highlight">7-Figure Business</span> in 12 Months or Less</h1>
+            <p class="hero-subtitle">The proven step-by-step system used by successful entrepreneurs to scale from startup to million-dollar revenue</p>
+            <div class="hero-cta-group">
+                <a href="#pricing" class="primary-cta">Join the Masterclass Now</a>
+                <a href="#video" class="secondary-cta">
+                    <span>▶</span> Watch Success Stories
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <div class="proof-item">
+                    <span class="proof-number">50,000+</span>
+                    <span>Successful Students</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">$500M+</span>
+                    <span>Revenue Generated</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">4.9★</span>
+                    <span>Average Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Real Results from Real People</h2>
+            <p class="section-subtitle">See how our students transformed their businesses</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"This course completely changed my business. I went from struggling to make $5K/month to consistently hitting $80K. The strategies are practical and actually work!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <h4>Jessica Martinez</h4>
+                            <p>E-commerce Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I was skeptical at first, but within 6 months I scaled my agency to $1.2M in annual revenue. The ROI on this course is insane. Best investment I've ever made."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DK</div>
+                        <div class="author-info">
+                            <h4>David Kim</h4>
+                            <p>Marketing Agency Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The frameworks taught here are pure gold. I've taken many courses, but this is the only one that gave me a clear roadmap to 7 figures. Already at $650K this year!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <h4>Sarah Rodriguez</h4>
+                            <p>SaaS Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"From zero to $40K/month in 4 months. The community alone is worth the price. These people actually care about your success and provide real support."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MT</div>
+                        <div class="author-info">
+                            <h4>Michael Thompson</h4>
+                            <p>Online Course Creator</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I tripled my revenue in 8 months using just the first three modules. The content is dense but incredibly actionable. Every lesson has immediate value."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div class="author-info">
+                            <h4>Amanda Lee</h4>
+                            <p>Consulting Business</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"This isn't theory - it's a battle-tested system. I finally hit my first $100K month last quarter. The accountability and support made all the difference."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RC</div>
+                        <div class="author-info">
+                            <h4>Robert Chen</h4>
+                            <p>Digital Products Business</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section" id="video">
+        <div class="container">
+            <div class="video-content">
+                <div class="video-text">
+                    <h2>See How Our Students Achieved 7-Figure Success</h2>
+                    <p>Watch real entrepreneurs share their transformation stories and the exact strategies they used to scale their businesses.</p>
+                    <ul>
+                        <li>Step-by-step revenue growth strategies</li>
+                        <li>Proven marketing systems that convert</li>
+                        <li>Scalable business models that work</li>
+                        <li>Time management for busy entrepreneurs</li>
+                        <li>Building high-performing teams</li>
+                    </ul>
+                </div>
+                <div class="video-placeholder" onclick="playVideo()">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results">
+        <div class="container">
+            <h2 class="section-title">Results That Speak for Themselves</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">📈</div>
+                    <div class="result-stat">387%</div>
+                    <div class="result-label">Average Revenue Growth</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">💰</div>
+                    <div class="result-stat">$500M+</div>
+                    <div class="result-label">Student Revenue Generated</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">👥</div>
+                    <div class="result-stat">50,000+</div>
+                    <div class="result-label">Successful Entrepreneurs</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">⏱️</div>
+                    <div class="result-stat">6 Months</div>
+                    <div class="result-label">Average Time to 6 Figures</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">What You'll Get Inside</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h3>Proven Growth Framework</h3>
+                        <p>Our proprietary 7-Figure Blueprint that's been tested and refined with over 50,000 businesses</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-content">
+                        <h3>Marketing That Converts</h3>
+                        <p>High-converting funnels, ad strategies, and customer acquisition systems that scale</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💡</div>
+                    <div class="benefit-content">
+                        <h3>Weekly Live Coaching</h3>
+                        <p>Get your questions answered by industry experts in our exclusive live sessions</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-content">
+                        <h3>Elite Community</h3>
+                        <p>Network with ambitious entrepreneurs and form partnerships that accelerate growth</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-content">
+                        <h3>Complete Resource Library</h3>
+                        <p>Templates, scripts, SOPs, and tools worth $10,000+ that you can use immediately</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚀</div>
+                    <div class="benefit-content">
+                        <h3>Implementation Support</h3>
+                        <p>Step-by-step action plans and accountability to ensure you actually execute</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container pricing-container">
+            <div class="pricing-header">
+                <h2>Join the 7-Figure Masterclass Today</h2>
+                <p>Everything you need to scale your business to 7 figures and beyond</p>
+            </div>
+            <div class="pricing-card">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-top">
+                    <div class="pricing-amount">$1,997</div>
+                    <div class="pricing-period">One-time payment</div>
+                    <div class="pricing-save">Save $1,000 - Limited Time</div>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>12-Month Masterclass Program</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Weekly Live Coaching Calls</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>7-Figure Business Blueprint</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Private Community Access</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>$10K+ Templates & Resources</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Marketing Automation Tools</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Lifetime Access to Content</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>All Future Updates Free</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>1-on-1 Strategy Session</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Implementation Roadmap</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Expert Guest Trainings</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>60-Day Money-Back Guarantee</span>
+                    </div>
+                </div>
+                <div class="pricing-cta">
+                    <a href="#" class="pricing-button" onclick="handleEnrollment(event)">Secure Your Spot Now</a>
+                    <p class="guarantee-text">🔒 Secure Payment | 60-Day Money-Back Guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-testimonials">
+        <div class="container">
+            <div class="big-testimonial">
+                <div class="stars">★★★★★</div>
+                <blockquote>
+                    "I was running a six-figure business but felt completely stuck. This masterclass gave me the exact roadmap to break through to seven figures. Within 10 months, we hit $1.4M in revenue. The strategies, community, and coaching are worth 10x what I paid."
+                </blockquote>
+                <div class="big-author">
+                    <div class="big-avatar">EW</div>
+                    <div class="big-author-info">
+                        <h4>Emily Watson</h4>
+                        <p>CEO, Digital Marketing Agency | $1.4M Revenue</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+                <a href="#">Refund Policy</a>
+            </div>
+            <p>&copy; 2024 GrowthMaster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function playVideo() {
+            alert('In a real application, this would open a video player with testimonials and course preview.');
+        }
+
+        function handleEnrollment(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! In a real application, this would redirect to a secure checkout page.');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.testimonial-card, .result-card, .benefit-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Dynamic stats counter animation
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = value.toLocaleString();
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Animate social proof numbers when they come into view
+        const proofObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numberElement = entry.target.querySelector('.proof-number');
+                    const text = numberElement.textContent;
+                    if (text.includes('50,000+')) {
+                        numberElement.textContent = '0+';
+                        animateValue(numberElement, 0, 50000, 2000);
+                    }
+                    proofObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.proof-item').forEach(el => {
+            proofObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
